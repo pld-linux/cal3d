@@ -6,11 +6,11 @@ Version:	0.9.1
 Release:	2.%{snap}.1
 License:	LGPL
 Group:		Libraries
-# From cvs.gna.org/cvs/underware
+#Source0:	http://dl.sourceforge.net/cal3d/%{name}-%{version}.tar.bz2
+# from cvs.gna.org/cvs/underware
 Source0:	%{name}-%{snap}.tar.bz2
 # Source0-md5:	cd3caf76a68ef67333c920f7915ef2ef
-# Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
-# Patch0:		%{name}-fixtag.patch
+Patch0:		%{name}-fixtag.patch
 URL:		http://cal3d.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -42,7 +42,7 @@ Pliki nag³ówkowe biblioteki cal3d.
 
 %prep
 %setup -q -n %{name}
-# %patch0 -p1
+%patch0 -p1
 
 %build
 rm -f acinclude.m4
