@@ -1,13 +1,16 @@
+%define		snap 20040629
 Summary:	3d character animation library
 Summary(pl):	Biblioteka do trójwymiarowej animacji postaci
 Name:		cal3d
 Version:	0.9.1
-Release:	2
+Release:	2.%{snap}.1
 License:	LGPL
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
-# Source0-md5:	55023cf5b4063990f355629c57a175af
-Patch0:		%{name}-fixtag.patch
+# From cvs.gna.org/cvs/underware
+Source0:	%{name}-%{snap}.tar.gz
+# Source0-md5:	f123cea793a189a6f55f57ec36a044c3
+# Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
+# Patch0:		%{name}-fixtag.patch
 URL:		http://cal3d.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -28,7 +31,7 @@ C++ w sposób niezale¿ny od architektury.
 Summary:	Header files for cal3d library
 Summary(pl):	Pliki nag³ówkowe biblioteki cal3d
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for cal3d library.
@@ -37,8 +40,8 @@ Header files for cal3d library.
 Pliki nag³ówkowe biblioteki cal3d.
 
 %prep
-%setup -q
-%patch0 -p1
+%setup -q -n %{name}
+# %patch0 -p1
 
 %build
 rm -f acinclude.m4
