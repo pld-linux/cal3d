@@ -70,7 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-#%doc docs/api/html/*
+%doc docs/api/html/*
 %attr(755,root,root) %{_libdir}/libcal3d.so
 %{_libdir}/lib*.la
 %{_includedir}/%{name}
