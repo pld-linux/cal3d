@@ -15,8 +15,10 @@ URL:		http://cal3d.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	docbook-utils
-BuildRequires:	docbook-dtd31-sgml
+BuildRequires:	docbook-dtd42-xml
 BuildRequires:	doxygen
+BuildRequires:	gnome-doc-tools
+BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
