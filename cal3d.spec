@@ -2,7 +2,7 @@ Summary:	3d character animation library
 Summary(pl):	Biblioteka do trójwymiarowej animacji postaci
 Name:		cal3d
 Version:	0.9.1
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
