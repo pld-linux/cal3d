@@ -7,6 +7,7 @@ License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 # Source0-md5:	55023cf5b4063990f355629c57a175af
+Patch0:		%{name}-fixtag.patch
 URL:		http://cal3d.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -37,6 +38,7 @@ Pliki nag³ówkowe biblioteki cal3d.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 rm -f acinclude.m4
@@ -68,7 +70,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc docs/api/html/*
+#%doc docs/api/html/*
 %attr(755,root,root) %{_libdir}/libcal3d.so
 %{_libdir}/lib*.la
 %{_includedir}/%{name}
