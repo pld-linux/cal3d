@@ -1,15 +1,12 @@
-%define		snap 20040720
 Summary:	3d character animation library
 Summary(pl):	Biblioteka do trójwymiarowej animacji postaci
 Name:		cal3d
-Version:	0.9.1
-Release:	2.%{snap}.1
+Version:	0.10.0
+Release:	1
 License:	LGPL
 Group:		Libraries
-#Source0:	http://dl.sourceforge.net/cal3d/%{name}-%{version}.tar.bz2
-# from cvs.gna.org/cvs/underware
-Source0:	%{name}-%{snap}.tar.bz2
-# Source0-md5:	cd3caf76a68ef67333c920f7915ef2ef
+Source0:	http://dl.sourceforge.net/cal3d/%{name}-full-%{version}.tar.bz2
+# Source0-md5:	47b3b72c6adcf5351f0884639d606d05
 Patch0:		%{name}-fixtag.patch
 URL:		http://cal3d.sourceforge.net/
 BuildRequires:	autoconf
@@ -43,7 +40,7 @@ Header files for cal3d library.
 Pliki nag³ówkowe biblioteki cal3d.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 %patch0 -p1
 
 %build
@@ -59,6 +56,8 @@ rm -f acinclude.m4
 cd docs
 %{__make} doc-api
 %{__make} doc-guide
+cd ..
+cp -r docs/api/html api
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -71,12 +70,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog README TODO docs/guide
+%doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_libdir}/libcal3d.so.*
 
 %files devel
 %defattr(644,root,root,755)
-%doc docs/api/html/*
+%doc api docs/guide docs/modeling
 %attr(755,root,root) %{_libdir}/libcal3d.so
 %{_libdir}/lib*.la
 %{_includedir}/%{name}
