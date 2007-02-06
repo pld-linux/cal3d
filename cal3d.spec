@@ -1,14 +1,14 @@
 Summary:	3d character animation library
 Summary(pl):	Biblioteka do trójwymiarowej animacji postaci
 Name:		cal3d
-Version:	0.10.0
+Version:	0.11.0
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/cal3d/%{name}-full-%{version}.tar.bz2
-# Source0-md5:	47b3b72c6adcf5351f0884639d606d05
+Source0:	http://download.gna.org/cal3d/sources/%{name}-%{version}.tar.gz
+# Source0-md5:	82ad09c1c28e73bc9596aec47237bfba
 Patch0:		%{name}-fixtag.patch
-URL:		http://cal3d.sourceforge.net/
+URL:		https://gna.org/projects/cal3d/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	docbook-utils
@@ -41,7 +41,7 @@ Pliki nag³ówkowe biblioteki cal3d.
 
 %prep
 %setup -q
-%patch0 -p1
+#%patch0 -p1
 
 %build
 rm -f acinclude.m4
@@ -71,11 +71,13 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
+%attr(755,root,root) %{_bindir}/cal3d*
 %attr(755,root,root) %{_libdir}/libcal3d.so.*
+%{_mandir}/man1/cal3d*
 
 %files devel
 %defattr(644,root,root,755)
-%doc api docs/guide docs/modeling
+%doc api docs/guide
 %attr(755,root,root) %{_libdir}/libcal3d.so
 %{_libdir}/lib*.la
 %{_includedir}/%{name}
