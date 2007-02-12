@@ -1,5 +1,5 @@
 Summary:	3d character animation library
-Summary(pl.UTF-8):   Biblioteka do trójwymiarowej animacji postaci
+Summary(pl.UTF-8):	Biblioteka do trójwymiarowej animacji postaci
 Name:		cal3d
 Version:	0.11.0
 Release:	1
@@ -29,7 +29,7 @@ C++ w sposób niezależny od architektury.
 
 %package devel
 Summary:	Header files for cal3d library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki cal3d
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki cal3d
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
