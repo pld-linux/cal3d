@@ -8,6 +8,7 @@ Group:		Libraries
 Source0:	http://download.gna.org/cal3d/sources/%{name}-%{version}.tar.gz
 # Source0-md5:	82ad09c1c28e73bc9596aec47237bfba
 Patch0:		%{name}-fixtag.patch
+Patch1:		%{name}-string.patch
 URL:		https://gna.org/projects/cal3d/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -42,6 +43,7 @@ Pliki nagłówkowe biblioteki cal3d.
 %prep
 %setup -q
 #%patch0 -p1
+%patch1 -p1
 
 %build
 rm -f acinclude.m4
