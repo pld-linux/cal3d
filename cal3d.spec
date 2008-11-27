@@ -12,9 +12,9 @@ Patch1:		%{name}-string.patch
 URL:		https://gna.org/projects/cal3d/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	docbook-dtd31-sgml
 BuildRequires:	docbook-utils
 BuildRequires:	doxygen
-BuildRequires:	gnome-doc-tools
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	scrollkeeper
