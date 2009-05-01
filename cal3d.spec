@@ -1,4 +1,5 @@
 Summary:	3d character animation library
+Summary(hu.UTF-8):	3D karakter animáció könyvtára
 Summary(pl.UTF-8):	Biblioteka do trójwymiarowej animacji postaci
 Name:		cal3d
 Version:	0.11.0
@@ -24,18 +25,26 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Cal3d is a 3d character animation library written in C++ in a
 platform-/graphic API-independent way.
 
+%description -l hu.UTF-8
+Cal3d egy C++-ban íródott 3d karakter-animációs könyvtár
+platform/grafikus API-független módon.
+
 %description -l pl.UTF-8
 Cal3d jest biblioteką do trójwymiarowej animacji postaci napisaną w
 C++ w sposób niezależny od architektury.
 
 %package devel
 Summary:	Header files for cal3d library
+Summary(hu.UTF-8):	Fejléc fájlok a cal3d könyvtárhoz
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki cal3d
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for cal3d library.
+
+%description devel -l hu.UTF-8
+Fejléc fájlok a cal3d könyvtárhoz.
 
 %description devel -l pl.UTF-8
 Pliki nagłówkowe biblioteki cal3d.
