@@ -79,11 +79,15 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
+
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_bindir}/cal3d*
-%attr(755,root,root) %{_libdir}/libcal3d.so.*
+%attr(755,root,root) %{_libdir}/libcal3d.so.*.*
+%attr(755,root,root) %ghost %{_libdir}/libcal3d.so.12
 %{_mandir}/man1/cal3d*
 
 %files devel
