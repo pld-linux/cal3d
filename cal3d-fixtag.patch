@@ -766,53 +766,6 @@ diff -urN cal3d-0.9.1.orig/docs/guide_architecture.sgml cal3d-0.9.1/docs/guide_a
        every part of the core model (every submesh to be more exact) has a material
        thread assigned. You can now very easily change the look of a model instance,
        by simply select a new current material set for its parts. The Cal3D library is
-diff -urN cal3d-0.9.1.orig/docs/guide_introduction.sgml cal3d-0.9.1/docs/guide_introduction.sgml
---- cal3d-0.9.1.orig/docs/guide_introduction.sgml	2004-05-31 19:07:22.346376024 +0200
-+++ cal3d-0.9.1/docs/guide_introduction.sgml	2004-05-31 20:19:00.786913736 +0200
-@@ -33,7 +33,7 @@
-     </para>
- 
-     <formalpara>
--      <title><xref linkend="introduction"></title>
-+      <title><xref linkend="introduction"/></title>
-       <para>
-         This is the chapter you are currently reading. The most important part is
-         the one about the <link linkend="licenses">Licenses</link>.
-@@ -41,7 +41,7 @@
-     </formalpara>
- 
-     <formalpara>
--      <title><xref linkend="decisions"></title>
-+      <title><xref linkend="decisions"/></title>
-       <para>
-         This chapter provides some background information about the development of
-         Cal3D. It does not contain any crucial facts you have to know in order to use
-@@ -50,14 +50,14 @@
-     </formalpara>
- 
-     <formalpara>
--      <title><xref linkend="setup"></title>
-+      <title><xref linkend="setup"/></title>
-       <para>
-         This chapter explains how you obtain, install and compile the Cal3D library.
-       </para>
-     </formalpara>
- 
-     <formalpara>
--      <title><xref linkend="architecture"></title>
-+      <title><xref linkend="architecture"/></title>
-       <para>
-         This chapter illustrates the architecture of the Cal3D library. All the components
-         and terminologies are explaind in every detail.
-@@ -65,7 +65,7 @@
-     </formalpara>
- 
-     <formalpara>
--      <title><xref linkend="usage"></title>
-+      <title><xref linkend="usage"/></title>
-       <para>
-         This chapter explains the usage of the Cal3D library step by step. The topics
-         cover creation, modification, animation and rendering of models.
 diff -urN cal3d-0.9.1.orig/docs/guide.sgml cal3d-0.9.1/docs/guide.sgml
 --- cal3d-0.9.1.orig/docs/guide.sgml	2004-05-31 19:07:22.346376024 +0200
 +++ cal3d-0.9.1/docs/guide.sgml	2004-05-31 20:18:00.142133144 +0200
