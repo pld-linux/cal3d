@@ -67,7 +67,7 @@ Dokumentacja i wprowadzenie do biblioteki cal3d.
 %setup -q -n Cal3D-%{version}
 cd cal3d
 #%patch0 -p1
-%patch1 -p1
+%patch -P1 -p1
 
 # obsolete macro, UnitTest++ 2 uses pkg-config instead
 %{__sed} -i -e '/^AM_USE_UNITTESTCPP/d' configure.in
